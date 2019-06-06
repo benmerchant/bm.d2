@@ -4,7 +4,7 @@
   "description": "Professional Website for Full Stack Developer Ben Merchant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/benmerchant/bm.d2/issues"
   },
-  "homepage": "https://github.com/benmerchant/bm.d2#readme"
+  "homepage": "https://github.com/benmerchant/bm.d2#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  }
 }
