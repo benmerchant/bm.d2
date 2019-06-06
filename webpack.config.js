@@ -1,5 +1,6 @@
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // use mini-css-extract-plugin in prod
 // doesn't like sending the <title> to the template, it is possibel
 module.exports = {
@@ -9,7 +10,29 @@ module.exports = {
     filename: 'main_bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.join(__dirname,'src/index.html')
-  })]
+  plugins: [
+    // clean dist folder each build
+    new CleanWebpackPlugin(),
+    // generate index files
+    new HtmlWebpackPlugin(
+      {
+        // use my template for generation
+        template: path.join(__dirname,'src/index.html')
+      }
+    )
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          // come back later and add mini-css for prod build
+          // so that it isnt dependent on JS
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+  }
 };

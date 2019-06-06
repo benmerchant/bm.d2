@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 let alertWord = _.join(['Hello', 'Node'], ' ');
 
