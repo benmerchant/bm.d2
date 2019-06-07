@@ -13,6 +13,8 @@ import {homeTemplate} from './home.html.js';
 // need a service in a moment lets just get ng-repeat working
 import {newStories} from './storiesInFakeMongo';
 
+const FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT = "Some quick example text to build on the card title and make up the bulk of the card's content.".length-17;
+
 class homeController {
   constructor(){};
 
@@ -21,11 +23,10 @@ class homeController {
     const storyMap = newStories.map(story => {
       let newYear = story.date.getFullYear();
       story['year'] = newYear;
+      story['snippet'] = story.body_copy.substring(0,FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT)+'...';
     });
     this.stories = newStories;
     console.log(this.stories);
-    this.tryStories = angular.copy(this.stories);
-    console.log(this.tryStories);
   };
 };
 
