@@ -16,20 +16,28 @@ export const homeTemplate = `
   </div>
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
-      <div ng-repeat="story in $ctrl.stories" class="col p-0">
+    <!-- # begin NG-REPEAT -->
+      <div ng-repeat="story in $ctrl.tryStories" class="col p-0">
 
         <!-- # begin card -->
         <div class="card mx-auto my-3" style="width: 18rem;">
-          <img src="https://via.placeholder.com/350" class="card-img-top" alt="...">
+          <img src="https://petharbor.com/get_image.asp?RES=Detail&ID=A607751&LOCATION=AZHS1" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{story.title}}</h5>
+            <div class="d-flex flex-row justify-content-between">
+              {{story.date.toDateString()}}
+              <em><a href="#">{{story.category}}</a></em>
+            </div>
+            <hr>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
         <!-- # end card -->
 
-      </div> <!-- end col -->
+      </div>
+      <!-- # begin NG-REPEAT -->
+
 
       </div>
     </div>
