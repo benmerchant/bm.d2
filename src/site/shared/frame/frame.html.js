@@ -18,10 +18,6 @@ import {footerTemplate} from '../footer/footer.html';
 export const frameTemplate = `
 ${navTemplate}
 <main class="container">
-  <h3 style='color:red;'>Frame State</h3><br><br>
-  <button class="btn btn-success" ui-sref="home">Home</button>
-  <button class="btn btn-success" ui-sref="linkList">Link List</button>
-  <br><br>
   <ui-view></ui-view>
 </main>
 ${footerTemplate}
