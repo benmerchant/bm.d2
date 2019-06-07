@@ -6,10 +6,13 @@
  *
  * Author: Ben Merchant
 */
-console.log('home.html.js');
-
 import homeStyles from './home.scss'
 
 export const homeTemplate = `
-<h2>Home State</h2>
+<div class='row homeRow'>
+  <div class='col-12 text-center'>
+    <h2 class="text-white">Home State</h2>
+  </div>
+
+</div>
 `;

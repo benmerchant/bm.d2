@@ -9,7 +9,7 @@
 */
 // import scss
 // for now, leave this here, can move it later to where it makes more sense
-import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 import './index.scss';
 
 import * as angular from 'angular';
