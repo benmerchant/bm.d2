@@ -9,6 +9,9 @@
  * Author: Ben Merchant
 */
 console.log('frame.html.js');
+
+import frameStyles from './frame.scss'
+
 export const frameTemplate = `
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a href="#" class="navbar-brand text-white">Ben Merchant dot dev</a>
