@@ -12,12 +12,12 @@ export const homeTemplate = `
 <div class='row homeRow'>
   <div class='col-12 text-center text-white'>
     <h2>Home State</h2>
-    <h5>Total of {{$ctrl.stories.length}} stories</h5>
+    <h5>Total of {{$parent.$ctrl.stories.length}} stories</h5>
   </div>
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
     <!-- # begin NG-REPEAT -->
-      <div ng-repeat="story in $ctrl.tryStories" class="col p-0">
+      <div ng-repeat="story in $parent.$ctrl.stories | filter:$parent.topSearch" class="col p-0">
 
         <!-- # begin card -->
         <div class="card mx-auto my-3" style="width: 18rem;">
@@ -29,7 +29,7 @@ export const homeTemplate = `
               <em><a href="#">{{story.category}}</a></em>
             </div>
             <hr>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{{story.snippet}}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
