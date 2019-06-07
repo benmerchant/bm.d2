@@ -9,7 +9,7 @@
 */
 console.log('linkLister.component.js');
 // first need the html template for the linkListerState object
-import {linkListerTemplate} from './linkLister.html.js';
+import {linkListerTemplate} from './linkLister.html';
 
 class linkListerController {
   constructor(){

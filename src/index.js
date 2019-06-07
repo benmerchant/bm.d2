@@ -19,9 +19,9 @@ import uiRouter from '@uirouter/angularjs';
 import {AllStates} from './site/site.states';
 
 // import components to register with angularjs
-import {frameComponent} from './site/shared/frame/frame.component.js'
-import {homeComponent} from './site/features/home/home.component.js'
-import {linkListerComponent} from './site/features/linkLister/linkLister.component.js'
+import {frameComponent} from './site/shared/frame/frame.component'
+import {homeComponent} from './site/features/home/home.component'
+import {linkListerComponent} from './site/features/linkLister/linkLister.component'
 
 // create the app-level module and inject ui-router
 const BMDD_MODULE = angular.module('bmddApp', [uiRouter]);
