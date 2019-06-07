@@ -5,9 +5,10 @@
  *
  * Author: Ben Merchant
 */
+
 export const navTemplate = `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Ben Merchant dot dev</a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,7 +31,7 @@ export const navTemplate = `
     <!-- Filter the Cards -->
       <input ng-model="cardSearch" class="form-control mr-sm-2" type="search" placeholder="Search">
 
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
