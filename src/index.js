@@ -18,13 +18,16 @@ import uiRouter from '@uirouter/angularjs';
 // import the states for registration
 import {AllStates} from './site/site.states';
 
-// import components to register with angularjs
-import {frameComponent} from './site/shared/frame/frame.component'
-import {homeComponent} from './site/features/home/home.component'
-import {linkListerComponent} from './site/features/linkLister/linkLister.component'
+// import the other modules to register with Angular top-level module
+import {SharedModule} from './site/shared/shared.module';
+import {FeaturesModule} from './site/features/features.module';
 
 // create the app-level module and inject ui-router
-const BMDD_MODULE = angular.module('bmddApp', [uiRouter]);
+const BMDD_MODULE = angular.module('bmddApp', [
+  uiRouter,
+  FeaturesModule.name,
+  SharedModule.name
+]);
 BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
   console.log('BMDD_MODULE.config');
   // enable tracing the State Transitions in the console
@@ -37,7 +40,3 @@ BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
   AllStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});
 
 }]);
-// register with top-level angular module
-BMDD_MODULE.component('frameComponent',frameComponent);
-BMDD_MODULE.component('homeComponent',homeComponent);
-BMDD_MODULE.component('linkListerComponent',linkListerComponent);
