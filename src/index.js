@@ -20,6 +20,8 @@ import {AllStates} from './site/site.states';
 
 // import components to register with angularjs
 import {frameComponent} from './site/shared/frame/frame.component.js'
+import {homeComponent} from './site/features/home/home.component.js'
+import {linkListerComponent} from './site/features/linkLister/linkLister.component.js'
 
 // create the app-level module and inject ui-router
 const BMDD_MODULE = angular.module('bmddApp', [uiRouter]);
@@ -37,3 +39,5 @@ BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
 }]);
 // register with top-level angular module
 BMDD_MODULE.component('frameComponent',frameComponent);
+BMDD_MODULE.component('homeComponent',homeComponent);
+BMDD_MODULE.component('linkListerComponent',linkListerComponent);

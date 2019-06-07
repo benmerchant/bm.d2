@@ -8,7 +8,9 @@
 */
 console.log('site.states.js');
 // import components
-import {frameComponent} from './shared/frame/frame.component'
+import {frameComponent} from './shared/frame/frame.component';
+import {homeComponent} from './features/home/home.component';
+import {linkListerComponent} from './features/home/home.component';
 
 // define states
 
@@ -26,7 +28,7 @@ const homeState = {
   parent: 'frame',
   name: 'home',
   url: '/home',
-  template: `<h2>Home State</h2>`
+  component: 'homeComponent'
 }
 // one more state to test the transitions
 // we're only gonna have one other state later anyways
@@ -34,7 +36,7 @@ const linkListState = {
   parent: 'frame',
   name: 'linkList',
   url: '/linkList',
-  template: `<h2>Link List State</h2>`
+  component: `linkListerComponent`
 }
 
 // export all together
