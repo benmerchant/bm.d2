@@ -7,7 +7,6 @@
  *
  * Author: Ben Merchant
 */
-console.log('home.component.js');
 // first need the html template for the homeState object
 import {homeTemplate} from './home.html.js';
 
@@ -15,12 +14,18 @@ import {homeTemplate} from './home.html.js';
 import {newStories} from './storiesInFakeMongo';
 
 class homeController {
-  constructor(){
-    this.name = 'Ben Merchant';
-  };
+  constructor(){};
+
   $onInit(){
+    // make some programatticly created dates
+    const storyMap = newStories.map(story => {
+      let newYear = story.date.getFullYear();
+      story['year'] = newYear;
+    });
     this.stories = newStories;
     console.log(this.stories);
+    this.tryStories = angular.copy(this.stories);
+    console.log(this.tryStories);
   };
 };
 
