@@ -17,7 +17,7 @@ export const homeTemplate = `
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
     <!-- # begin NG-REPEAT -->
-      <div ng-repeat="story in $parent.$ctrl.stories" class="col p-0">
+      <div ng-repeat="story in $parent.$ctrl.stories | filter:$parent.topSearch" class="col p-0">
 
         <!-- # begin card -->
         <div class="card mx-auto my-3" style="width: 18rem;">

@@ -18,9 +18,7 @@ const FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT = "Some quick example text to build on
 
 
 class frameController {
-  constructor(){
-    this.name = 'Ben Merchant';
-  };
+  constructor(){this.name = 'Ben Merchant';};
   $onInit(){
     // make some programatticly created dates
     const storyMap = newStories.map(story => {
