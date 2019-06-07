@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/benmerchant/bm.d2#readme",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.22",
+    "@uirouter/visualizer": "^7.0.0",
+    "angular": "^1.7.8",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.11"
   },
