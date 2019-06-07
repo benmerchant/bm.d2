@@ -9,6 +9,10 @@
  * Author: Ben Merchant
 */
 console.log('frame.html.js');
+import logoGray from '../../../imgs/logo_gray_knockout.png';
+const logoGrayElement = new Image();
+logoGrayElement.src = logoGray;
+
 
 import frameStyles from './frame.scss'
 
@@ -17,7 +21,7 @@ import {footerTemplate} from '../footer/footer.html';
 
 export const frameTemplate = `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Ben Merchant dot dev</a>
+<div ><a class="navbar-brand" href="#"><img src="${logoGray}" style="height:60px"></a></div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

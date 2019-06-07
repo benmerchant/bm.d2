@@ -17,7 +17,8 @@ module.exports = {
     new HtmlWebpackPlugin(
       {
         // use my template for generation
-        template: path.join(__dirname,'src/index.html')
+        template: path.join(__dirname,'src/index.html'),
+        favicon: path.resolve(__dirname, 'src/imgs/logo_gray_knockout.ico')
       }
     )
   ],
@@ -32,6 +33,10 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)/,
+        use: ['file-loader'] 
       }
     ]
   }
