@@ -57,13 +57,8 @@ export const frameTemplate = `
 
 <main class="container">
 
+    <ui-view></ui-view>
 
-
-
-
-
-
-  <ui-view></ui-view>
 </main>
 ${footerTemplate}
 `;

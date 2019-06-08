@@ -11,6 +11,8 @@ import {frameComponent} from './shared/frame/frame.component';
 import {homeComponent} from './features/home/home.component';
 import {linkListerComponent} from './features/home/home.component';
 
+import {createForm} from './features/linkLister/linkList.createForm.html.js';
+
 // define states
 
 // parent state - the 'frame' for entire app
@@ -38,9 +40,51 @@ const linkListState = {
   component: `linkListerComponent`
 }
 
+// just do it the long, ugly way for now
+// remember: MVP, that's it
+const createLinkFormState = {
+  parent: 'linkList',
+  name: 'createLink',
+  url: '/new-link',
+  template: createForm
+}
+const listLinkFormState = {
+  parent: 'linkList',
+  name: 'listLinks',
+  url: '/view-links',
+  template: '<h1>LINKS GO HERE</h1>'
+}
+const editLinkFormState = {
+  parent: 'linkList',
+  name: 'editLinks',
+  url: '/edit-link',
+  template: '<h1>EDIT LINK FORM HERE</h1>'
+}
+const deleteLinkFormState = {
+  parent: 'linkList',
+  name: 'deleteLinks',
+  url: '/delete-links',
+  template: '<h1>DELETE LINK FORM</h1>'
+}
+const viewOneLinkState = {
+  parent: 'linkList',
+  name: 'viewOneLink',
+  url: '/view-link',
+  template: '<h1>VIEW ONE LINK</h1>'
+}
+
+
+
+
+
 // export all together
 export const AllStates = [
   frameState,
   homeState,
-  linkListState
+  linkListState,
+  createLinkFormState,
+  listLinkFormState,
+  editLinkFormState,
+  deleteLinkFormState,
+  viewOneLinkState
 ];

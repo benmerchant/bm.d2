@@ -14,10 +14,19 @@ import {homeTemplate} from './home.html.js';
 
 
 class homeController {
-  constructor(){};
-
-
+  constructor($state){this.$state = $state;};
+//   openStory(){
+//     console.log('heyoooo');
+//   };
+//
+//   isActive(feature){
+//     console.log('this ' + feature + ' is ' + this.$state.includes(feature));
+//     return this.$state.includes(feature);
+//   };
+//
+//
 };
+// homeController.$inject = ['$state'];
 
 export const homeComponent = {
   template: homeTemplate,

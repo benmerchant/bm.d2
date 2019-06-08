@@ -30,6 +30,14 @@ const blogState = {
   name: 'home.blog',
   component: 'blogComponent'
 };
+const blogPost = {
+  name: 'blog.post',
+  url: '/blog/:blogId',
+  templateUrl: 'blog.story.html',
+  controller: function($stateParams){
+    console.log($stateParams);
+  }
+};
 export const FeaturesStates = [
   aboutState,tutorialsState,projectsState,articlesState,blogState
 ];

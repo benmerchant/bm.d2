@@ -2,14 +2,10 @@
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
-.failure {
-  background-color: red;
-}
-
-.success {
-  background-color: green;
-}
 
 div.linkRow {
-  background-color: $green;
+  background-color: $blue;
+}
+div.link-dash-arena {
+  background-color: $cyan;
 }
