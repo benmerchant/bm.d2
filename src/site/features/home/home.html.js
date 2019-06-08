@@ -16,11 +16,22 @@ export const homeTemplate = `
   <div class='col-12'>
 
 
-
+  <ui-view>
   <div class="jumbotron jumbotron-fluid rounded">
     <div class="container">
-    <h1 class="display-4"><span ui-view>Ben Merchant dot dev</span></h1>
-      <p class="lead">Fullstack JavaScript Web Developer</p>
+    <h1 class="display-4">Ben Merchant dot dev</h1>
+
+      <p class="lead">
+        Fullstack JavaScript Web Developer | 
+        <i class="fab fa-node-js"></i>
+        <i class="fab fa-npm"></i>
+        <i class="fab fa-git"></i>
+        <i class="fab fa-aws"></i>
+        <i class="fab fa-angular"></i>
+        <i class="fab fa-sass"></i>
+      </p>
+
+
       <hr class="my-4">
       <p>
         Click the navigation or use the search bar above to filter the stories.
@@ -32,17 +43,15 @@ export const homeTemplate = `
     </div>
   </div>
 
-
-
-
-
-
+  </ui-view>
 
 
   </div>
 
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
+
+
     <!-- # begin NG-REPEAT              <ui-view></ui-view>-->
       <div ng-repeat="story in $parent.$ctrl.stories | filter:$parent.topSearch" class="col p-0">
 
@@ -53,17 +62,17 @@ export const homeTemplate = `
             <h5 class="card-title">{{story.title}}</h5>
             <div class="d-flex flex-row justify-content-between">
               {{story.date.toDateString()}}
-              <em><a href="#">{{story.category}}</a></em>
+              <em><a ui-sref="home.{{story.category}}">{{story.category}}</a></em>
             </div>
             <hr>
             <p class="card-text">{{story.snippet}}</p>
-            <a href="#" class="btn btn-outline-primary">Read More</a>
+            <button class="btn btn-outline-primary">Read More</button>
           </div>
         </div>
         <!-- # end card -->
 
       </div>
-      <!-- # begin NG-REPEAT -->
+      <!-- # end NG-REPEAT -->
 
 
       </div>

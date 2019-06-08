@@ -8,7 +8,7 @@
  *
  * Author: Ben Merchant
 */
-import logoGray from '../../../imgs/logo_gray_knockout.png';
+import logoGray from '../../../imgs/logo_gray.png';
 const logoGrayElement = new Image();
 logoGrayElement.src = logoGray;
 
@@ -28,7 +28,7 @@ export const frameTemplate = `
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <div class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-        <a class="nav-item nav-link active" ui-sref="home">All</a>
+        <a class="nav-item nav-link " ui-sref="home">All</a>
 
 
         <a class="nav-item nav-link" ui-sref="home.about">About</a>
@@ -47,7 +47,22 @@ export const frameTemplate = `
     </form>
   </div>
 </nav>
+
+
+
+
+
+
+
+
 <main class="container">
+
+
+
+
+
+
+
   <ui-view></ui-view>
 </main>
 ${footerTemplate}
