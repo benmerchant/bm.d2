@@ -18,20 +18,35 @@ const FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT = "Some quick example text to build on
 
 
 class frameController {
-  constructor(){this.name = 'Ben Merchant';};
+  constructor($state){
+    this.name = 'Ben Merchant';
+    this.$state = $state;
+    console.log($state.params);
+  };
   $onInit(){
     // make some programatticly created dates
+    // map probably isn't the best choice
     const storyMap = newStories.map(story => {
       let newYear = story.date.getFullYear();
       story['year'] = newYear;
       story['snippet'] = story.body_copy.substring(0,FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT)+'...';
+      story['id'] = newStories.indexOf(story);
     });
     this.stories = newStories;
-    console.log(this.stories);
+    this.goToSearchPage = ($state) => {
+        this.$state.transitionTo('frame.search');
+    };
   };
+  isActive(feature){
+    console.log('this ' + feature + ' is ' + this.$state.includes(feature));
+    return this.$state.includes(ffeature);
+  };
+
 };
+frameController.$inject = ['$state'];
 
 export const frameComponent = {
   template: frameTemplate,
-  controller: frameController
+  controller: frameController,
+  bindings: {name: '@'}
 };

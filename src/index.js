@@ -17,6 +17,7 @@ import uiRouter from '@uirouter/angularjs';
 
 // import the states for registration
 import {AllStates} from './site/site.states';
+import {FeaturesStates} from './site/features/features.states';
 
 // import the other modules to register with Angular top-level module
 import {SharedModule} from './site/shared/shared.module';
@@ -29,7 +30,6 @@ const BMDD_MODULE = angular.module('bmddApp', [
   SharedModule.name
 ]);
 BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
-  console.log('BMDD_MODULE.config');
   // enable tracing the State Transitions in the console
   $uiRouter.trace.enable(1);
 
@@ -38,5 +38,6 @@ BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
 
   // register the imported states
   AllStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});
+  FeaturesStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});
 
 }]);

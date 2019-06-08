@@ -6,11 +6,12 @@
  *
  * Author: Ben Merchant
 */
-console.log('site.states.js');
 // import components
 import {frameComponent} from './shared/frame/frame.component';
 import {homeComponent} from './features/home/home.component';
 import {linkListerComponent} from './features/home/home.component';
+
+import {createForm,theActualListOfLinks} from './features/linkLister/linkList.createForm.html.js';
 
 // define states
 
@@ -39,9 +40,38 @@ const linkListState = {
   component: `linkListerComponent`
 }
 
+// just do it the long, ugly way for now
+// remember: MVP, that's it
+const createLinkFormState = {
+  parent: 'linkList',
+  name: 'createLink',
+  url: '/new-link',
+  template: createForm
+}
+const listLinkState = {
+  parent: 'linkList',
+  name: 'listLinks',
+  url: '/view-links',
+  template: theActualListOfLinks
+}
+
+const viewOneLinkState = {
+  parent: 'linkList',
+  name: 'viewOneLink',
+  url: '/view-link/:linkId',
+  template: '<h1>EDIT AND DELETE STUFF HERE</h1>'
+}
+
+
+
+
+
 // export all together
 export const AllStates = [
   frameState,
   homeState,
-  linkListState
+  linkListState,
+  createLinkFormState,
+  listLinkState,
+  viewOneLinkState
 ];

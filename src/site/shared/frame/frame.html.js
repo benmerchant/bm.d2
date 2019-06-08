@@ -8,8 +8,7 @@
  *
  * Author: Ben Merchant
 */
-console.log('frame.html.js');
-import logoGray from '../../../imgs/logo_gray_knockout.png';
+import logoGray from '../../../imgs/logo_gray.png';
 const logoGrayElement = new Image();
 logoGrayElement.src = logoGray;
 
@@ -29,27 +28,39 @@ export const frameTemplate = `
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <div class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-        <a class="nav-item nav-link" ui-sref="home">All</a>
+        <a class="nav-item nav-link " ui-sref="home">All</a>
 
 
-        <a class="nav-item nav-link" href="#">About</a>
-        <a class="nav-item nav-link" href="#">Tutorials</a>
-        <a class="nav-item nav-link" href="#">Projects</a>
-        <a class="nav-item nav-link" href="#">Articles</a>
-        <a class="nav-item nav-link" href="#">Blogs</a>
-        <a class="nav-item nav-link" ui-sref="linkList">Link List</a>
+        <a class="nav-item nav-link" ui-sref="home.about">About</a>
+        <a class="nav-item nav-link" ui-sref="home.tutorials">Tutorials</a>
+        <a class="nav-item nav-link" ui-sref="home.projects">Projects</a>
+        <a class="nav-item nav-link" ui-sref="home.articles">Articles</a>
+        <a class="nav-item nav-link" ui-sref="home.blog">Blog</a>
+        <button class="btn nav-item nav-link btn-primary btn-sm" ui-sref="linkList">Link List</button>
 
     </div>
     <form class="form-inline my-2 my-lg-0">
     <!-- Filter the Cards -->
       <input ng-model="topSearch" class="form-control mr-sm-2" type="search" placeholder="Search">
 
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" ng-click="$ctrl.goToSearchPage()">
+        Search
+      </button>
     </form>
   </div>
 </nav>
+
+
+
+
+
+
+
+
 <main class="container">
-  <ui-view></ui-view>
+
+    <ui-view></ui-view>
+
 </main>
 ${footerTemplate}
 `;
