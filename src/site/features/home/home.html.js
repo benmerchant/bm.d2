@@ -14,6 +14,9 @@ export const homeTemplate = `
     <h2>Home State</h2>
     <h5>Total of {{$parent.$ctrl.stories.length}} stories</h5>
   </div>
+  <div class='col-12 text-center text-white bg-info'>
+    <ui-view></ui-view>
+  </div>
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
     <!-- # begin NG-REPEAT -->

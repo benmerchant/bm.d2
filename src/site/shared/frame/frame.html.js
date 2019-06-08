@@ -32,11 +32,11 @@ export const frameTemplate = `
         <a class="nav-item nav-link" ui-sref="home">All</a>
 
 
-        <a class="nav-item nav-link" href="#">About</a>
-        <a class="nav-item nav-link" href="#">Tutorials</a>
-        <a class="nav-item nav-link" href="#">Projects</a>
-        <a class="nav-item nav-link" href="#">Articles</a>
-        <a class="nav-item nav-link" href="#">Blogs</a>
+        <a class="nav-item nav-link" ui-sref="home.about">About</a>
+        <a class="nav-item nav-link" ui-sref="home.tutorials">Tutorials</a>
+        <a class="nav-item nav-link" ui-sref="home.projects">Projects</a>
+        <a class="nav-item nav-link" ui-sref="home.articles">Articles</a>
+        <a class="nav-item nav-link" ui-sref="home.blog">Blog</a>
         <a class="nav-item nav-link" ui-sref="linkList">Link List</a>
 
     </div>

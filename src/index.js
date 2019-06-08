@@ -17,6 +17,7 @@ import uiRouter from '@uirouter/angularjs';
 
 // import the states for registration
 import {AllStates} from './site/site.states';
+import {FeaturesStates} from './site/features/features.states';
 
 // import the other modules to register with Angular top-level module
 import {SharedModule} from './site/shared/shared.module';
@@ -38,5 +39,6 @@ BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
 
   // register the imported states
   AllStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});
+  FeaturesStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});
 
 }]);

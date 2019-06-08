@@ -6,7 +6,6 @@
  *
  * Author: Ben Merchant
 */
-console.log('site.states.js');
 // import components
 import {frameComponent} from './shared/frame/frame.component';
 import {homeComponent} from './features/home/home.component';
