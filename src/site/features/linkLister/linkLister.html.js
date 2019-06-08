@@ -13,22 +13,19 @@ export const linkListerTemplate = `
 <!-- Top Level of linkListState -->
 <div class="row linkRow">
   <!-- Header column -->
-  <div class="col-12 text-center text-white">
+  <div class="col-12 text-center text-white py-3">
     <h2 class="text-center">Link List State</h2>
     <h5>Total of {{$ctrl.allLinks.length}} Links</h5>
-
-      <button class="btn btn-outline-black" ui-sref="createLink">
+    <div class="btn-group" role="group">
+      <button class="btn btn-dark btn-lg" ui-sref="createLink">
         Add New Link
       </button>
-      <button class="btn btn-outline-black" ui-sref="listLinks">
+      <button class="btn btn-dark btn-lg" ui-sref="listLinks">
         View All Links
       </button>
-      <button class="btn btn-outline-black" ui-sref="editLinks">
-        Edit Links
-      </button>
-      <button class="btn btn-outline-black" ui-sref="deleteLinks">
-        Delete Links
-      </button>
+    </div>
+
+
 
   </div>
 
@@ -36,11 +33,23 @@ export const linkListerTemplate = `
   <div class="col-12 mb-5 link-dash-arena">
 
   <div class="row">
-    <div class="col-lg-3 col-md-12"></div>
-    <div class="col-lg-6 col-md-12">
-      <div ui-view>Click a Sub Nav for CRUD operations</div>
+    <div class="col-lg-2 col-md-12"></div>
+    <div class="col-lg-8 col-md-12">
+
+
+
+      <div ui-view>
+      <h1>
+Click a Sub Nav for CRUD operations
+      </h1>
+
+
+      </div>
+
+
+
     </div>
-    <div class="col-lg-3 col-md-12"></div>
+    <div class="col-lg-2 col-md-12"></div>
   </div>
 </div>
 `;

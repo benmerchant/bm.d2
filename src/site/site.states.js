@@ -11,7 +11,7 @@ import {frameComponent} from './shared/frame/frame.component';
 import {homeComponent} from './features/home/home.component';
 import {linkListerComponent} from './features/home/home.component';
 
-import {createForm} from './features/linkLister/linkList.createForm.html.js';
+import {createForm,theActualListOfLinks} from './features/linkLister/linkList.createForm.html.js';
 
 // define states
 
@@ -48,28 +48,17 @@ const createLinkFormState = {
   url: '/new-link',
   template: createForm
 }
-const listLinkFormState = {
+const listLinkState = {
   parent: 'linkList',
   name: 'listLinks',
   url: '/view-links',
-  template: '<h1>LINKS GO HERE</h1>'
+  template: theActualListOfLinks
 }
-const editLinkFormState = {
-  parent: 'linkList',
-  name: 'editLinks',
-  url: '/edit-link',
-  template: '<h1>EDIT LINK FORM HERE</h1>'
-}
-const deleteLinkFormState = {
-  parent: 'linkList',
-  name: 'deleteLinks',
-  url: '/delete-links',
-  template: '<h1>DELETE LINK FORM</h1>'
-}
+
 const viewOneLinkState = {
   parent: 'linkList',
   name: 'viewOneLink',
-  url: '/view-link',
+  url: '/view-link/:linkId',
   template: '<h1>VIEW ONE LINK</h1>'
 }
 
@@ -83,8 +72,6 @@ export const AllStates = [
   homeState,
   linkListState,
   createLinkFormState,
-  listLinkFormState,
-  editLinkFormState,
-  deleteLinkFormState,
+  listLinkState,
   viewOneLinkState
 ];

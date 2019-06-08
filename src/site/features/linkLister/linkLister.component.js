@@ -16,8 +16,9 @@ import {linkListerTemplate} from './linkLister.html';
 // right now, tho, its just a local module containing an array
 // inject it into the controller
 class linkListerController {
-  constructor(LinkListerService){
+  constructor(LinkListerService, $stateParams){
     this.LinkListerService = LinkListerService;
+    this.$stateParams = $stateParams
   };
   $onInit(){
     this.showWarning = false;
