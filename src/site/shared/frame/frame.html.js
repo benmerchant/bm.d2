@@ -43,7 +43,9 @@ export const frameTemplate = `
     <!-- Filter the Cards -->
       <input ng-model="topSearch" class="form-control mr-sm-2" type="search" placeholder="Search">
 
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" ng-click="$ctrl.goToSearchPage()">
+        Search
+      </button>
     </form>
   </div>
 </nav>

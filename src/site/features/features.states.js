@@ -38,6 +38,12 @@ const blogPost = {
     console.log($stateParams);
   }
 };
+
+// if they actually click SEARCH take to search results
+const searchState = {
+  name: 'frame.search',
+  template: '<h1 style="font-size:9rem"; class="text-white">seaarch results go here!</h1>'
+};
 export const FeaturesStates = [
-  aboutState,tutorialsState,projectsState,articlesState,blogState
+  aboutState,tutorialsState,projectsState,articlesState,blogState,searchState
 ];

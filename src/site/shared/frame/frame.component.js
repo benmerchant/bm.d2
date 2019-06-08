@@ -33,11 +33,15 @@ class frameController {
       story['id'] = newStories.indexOf(story);
     });
     this.stories = newStories;
+    this.goToSearchPage = ($state) => {
+        this.$state.transitionTo('frame.search');
+    };
   };
   isActive(feature){
     console.log('this ' + feature + ' is ' + this.$state.includes(feature));
-    return this.$state.includes(feature);
-  }
+    return this.$state.includes(ffeature);
+  };
+
 };
 frameController.$inject = ['$state'];
 
