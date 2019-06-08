@@ -30,7 +30,6 @@ const BMDD_MODULE = angular.module('bmddApp', [
   SharedModule.name
 ]);
 BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
-  console.log('BMDD_MODULE.config');
   // enable tracing the State Transitions in the console
   $uiRouter.trace.enable(1);
 

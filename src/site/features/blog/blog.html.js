@@ -9,5 +9,5 @@
 import blogStyles from './blog.scss';
 
 export const blogTemplate = `
-  <h2>Blog State</h2>
+Blog
 `;

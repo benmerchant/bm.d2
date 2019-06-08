@@ -10,16 +10,40 @@ import homeStyles from './home.scss'
 
 export const homeTemplate = `
 <div class='row homeRow'>
-  <div class='col-12 text-center text-white'>
-    <h2>Home State</h2>
-    <h5>Total of {{$parent.$ctrl.stories.length}} stories</h5>
+  <div class='col-12 text-center'>
+    <h5 class="text-primary">Total of {{$parent.$ctrl.stories.length}} stories</h5>
   </div>
-  <div class='col-12 text-center text-white bg-info'>
-    <ui-view></ui-view>
+  <div class='col-12'>
+
+
+
+  <div class="jumbotron jumbotron-fluid rounded">
+    <div class="container">
+    <h1 class="display-4"><span ui-view>Ben Merchant dot dev</span></h1>
+      <p class="lead">Fullstack JavaScript Web Developer</p>
+      <hr class="my-4">
+      <p>
+        Click the navigation or use the search bar above to filter the stories.
+        Link List is different because it's basically a beta project that will
+        be spun off to its own site one day. Not starting another site yet, though.
+        I give Bezos enough money every month.
+      </p>
+      <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+    </div>
   </div>
+
+
+
+
+
+
+
+
+  </div>
+
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
-    <!-- # begin NG-REPEAT -->
+    <!-- # begin NG-REPEAT              <ui-view></ui-view>-->
       <div ng-repeat="story in $parent.$ctrl.stories | filter:$parent.topSearch" class="col p-0">
 
         <!-- # begin card -->
@@ -33,7 +57,7 @@ export const homeTemplate = `
             </div>
             <hr>
             <p class="card-text">{{story.snippet}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
           </div>
         </div>
         <!-- # end card -->

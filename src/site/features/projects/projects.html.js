@@ -9,5 +9,5 @@
 import projectsStyles from './projects.scss';
 
 export const projectsTemplate = `
-  <h2>Projects State</h2>
+Projects
 `;

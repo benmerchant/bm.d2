@@ -9,5 +9,5 @@
 import articlesStyles from './articles.scss';
 
 export const articlesTemplate = `
-  <h2>Articles State</h2>
+  Articles
 `;

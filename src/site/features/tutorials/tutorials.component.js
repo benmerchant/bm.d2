@@ -12,8 +12,6 @@ import {tutorialsTemplate} from './tutorials.html';
 
 class tutorialsController {
   constructor(){};
-
-
 };
 
 export const tutorialsComponent = {

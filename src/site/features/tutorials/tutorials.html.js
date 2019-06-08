@@ -9,5 +9,5 @@
 import tutorialsStyles from './tutorials.scss';
 
 export const tutorialsTemplate = `
-  <h2>Tutorials State</h2>
+Tutorials 
 `;

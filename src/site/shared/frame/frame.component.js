@@ -27,7 +27,6 @@ class frameController {
       story['snippet'] = story.body_copy.substring(0,FAKE_GLOBAL_SNIPPET_CHARACTER_LIMIT)+'...';
     });
     this.stories = newStories;
-    console.log(this.stories);
   };
 };
 

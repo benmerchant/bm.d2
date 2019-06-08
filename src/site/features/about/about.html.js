@@ -9,5 +9,5 @@
 import aboutStyles from './about.scss';
 
 export const aboutTemplate = `
-  <h2>About State</h2>
+  About Me
 `;
