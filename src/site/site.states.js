@@ -59,7 +59,7 @@ const viewOneLinkState = {
   parent: 'linkList',
   name: 'viewOneLink',
   url: '/view-link/:linkId',
-  template: '<h1>VIEW ONE LINK</h1>'
+  template: '<h1>EDIT AND DELETE STUFF HERE</h1>'
 }
 
 

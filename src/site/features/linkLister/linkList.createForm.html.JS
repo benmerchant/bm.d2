@@ -20,6 +20,12 @@ export const createForm = `
     <textarea class="form-control" name="linkDesc-name" ng-model="$ctrl.newLinkForTheList.description" id="linkDesc-id" placeholder="Want to describe it a bit now. No obligation, of course."></textarea>
   </div>
 
+  <!-- Need an ID or crashes app -->
+  <div class="form-group">
+    <input name="id" ng-model="$ctrl.newLinkForTheList.id" type="hidden" id="linkURL-id" value="8976" required>
+
+  </div>
+
 
   <div class="form-group">
     <button class="btn btn-danger btn-lg" type="reset" ng-click="$ctrl.clearForm();linkForm.$setPristine();">
@@ -45,8 +51,8 @@ export const theActualListOfLinks = `
         </div>
         <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
         <div class="w-100 d-flex justify-content-center">
-          <h3><a ui-sref="viewOneLink( {linkId:{{link.id}} })" class="badge badge-primary mx-2">Edit</a></h3>
-          <h3><a ui-sref="viewOneLink( {linkId:{{link.id}} })" class="badge badge-danger  mx-2">Delete</a></h3>
+          <h3><a ui-sref="viewOneLink( {linkId:{{ (link.id?link.id:999) }} })" class="badge badge-primary mx-2">Edit</a></h3>
+          <h3><a ui-sref="viewOneLink( {linkId:{{ (link.id?link.id:999) }} })" class="badge badge-danger  mx-2">Delete</a></h3>
         </div>
 
 
