@@ -1,0 +1,27 @@
+.crazy-nav {
+  background-color: #f8f9fa !important;
+  // position: relative;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+img.logos {
+  height:60px;
+}
+
+div.battery {
+  color: white;
+  font-size: 73px;
+}
+
+.twist-shout {
+    transform: rotate(180deg);
+}

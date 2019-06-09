@@ -15,7 +15,7 @@ logoGrayElement.src = logoGray;
 
 import frameStyles from './frame.scss'
 
-import {navTemplate} from '../nav/nav.html';
+
 import {footerTemplate} from '../footer/footer.html';
 
 export const frameTemplate = `
