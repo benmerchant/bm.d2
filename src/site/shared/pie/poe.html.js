@@ -10,8 +10,9 @@ import poeStyles from './poe.scss'
 import logoBlack from '../../../imgs/logo_black.png';
 const logoBlackElement = new Image();
 logoBlackElement.src = logoBlack;
+
 export const poeTemplate = `
-<nav class="crazy-nav navbar-expand-sm navbar-light bg-light">
+<nav class="crazy-nav navbar-expand-sm navbar-light bg-primary">
   <div class="w-100 text-center">
     <a class="navbar-brand" href="#">
       <img src="${logoBlack}" class="logos twist-shout">
@@ -20,29 +21,38 @@ export const poeTemplate = `
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
-
-
   <div class="w-100">
     <form class="form-inline my-2 my-lg-0 twist-shout">
-    <!-- Filter the Cards -->
-      <input ng-model="topSearch" class="form-control mr-sm-2" type="search" placeholder="Search">
 
+      <input ng-model="" class="form-control mr-sm-2" type="search" placeholder="Search">
       <button class="btn btn-outline-primary my-2 my-sm-0 " type="submit" ng-click="$ctrl.goToSearchPage()">
         Search
       </button>
     </form>
   </div>
-
 </nav>
 
-<div class="battery"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div class="d-flex flex-row flex-wrap">
+  <div class="w-50 text-center text-white bg-dark pb-5 mt-5 d-block mx-auto twist-shout"><br>
+    <button class="btn btn-lg text-white" ui-sref="home">All</button><br>
+    <button class="btn btn-lg text-white" ui-sref="home.about">About</button><br>
+    <button class="btn btn-lg text-white" ui-sref="home.tutorials">Tutorials</button><br>
+    <button class="btn btn-lg text-white" ui-sref="home.projects">Projects</button><br>
+    <button class="btn btn-lg text-white" ui-sref="home.articles">Articles</button><br>
+    <button class="btn btn-lg text-white" ui-sref="home.blog">Blog</button><br>
+    <button class="btn btn-primary btn-sm" ui-sref="linkList">Link List</button><br>
+    <button class="btn btn-lg btn-dark" ng-click="$ctrl.getWidth()">Width</button><br>
+    {{$ctrl.a ? $ctrl.a : 'empty'}}<br>
+    {{$ctrl.b ? $ctrl.b : 'empty'}}<br>
+    {{$ctrl.c ? $ctrl.c : 'empty'}}<br>
+    {{$ctrl.d ? $ctrl.d : 'empty'}}<br>
+    {{$ctrl.e ? $ctrl.e : 'empty'}}<br>
+    {{$ctrl.f ? $ctrl.f : 'empty'}}<br>
+  </div>
+  <div class="text-white w-100 text-center ">
+    <h1 class="display-1">404</h1>
+  </div>
 
-<a class="nav-item nav-link " ui-sref="home">All</a>
-<a class="nav-item nav-link" ui-sref="home.about">About</a>
-<a class="nav-item nav-link" ui-sref="home.tutorials">Tutorials</a>
-<a class="nav-item nav-link" ui-sref="home.projects">Projects</a>
-<a class="nav-item nav-link" ui-sref="home.articles">Articles</a>
-<a class="nav-item nav-link" ui-sref="home.blog">Blog</a>
-<button class="btn nav-item nav-link btn-primary btn-sm" ui-sref="linkList">Link List</button>
+</div>
 
 `;
