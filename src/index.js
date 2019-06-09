@@ -26,6 +26,7 @@ import {FeaturesModule} from './site/features/features.module';
 // create the app-level module and inject ui-router
 const BMDD_MODULE = angular.module('bmddApp', [
   uiRouter,
+  require('angular-animate'),
   FeaturesModule.name,
   SharedModule.name
 ]);
