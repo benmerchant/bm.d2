@@ -20,7 +20,11 @@ import {footerTemplate} from '../footer/footer.html';
 
 export const frameTemplate = `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div ><a class="navbar-brand" href="#"><img src="${logoGray}" style="height:60px"></a></div>
+  <div>
+    <a class="navbar-brand" ui-sref="home">
+      <img src="${logoGray}" style="height:60px">
+    </a>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
