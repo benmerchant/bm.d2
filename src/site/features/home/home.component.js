@@ -13,7 +13,7 @@ import {homeTemplate} from './home.html.js';
 
 
 
-class homeController {
+class HomeController {
   constructor($state){this.$state = $state;};
 //   openStory(){
 //     console.log('heyoooo');
@@ -30,5 +30,5 @@ class homeController {
 
 export const homeComponent = {
   template: homeTemplate,
-  controller: homeController
+  controller: HomeController
 };
