@@ -9,7 +9,7 @@
 // import components
 import {frameComponent} from './shared/frame/frame.component';
 import {homeComponent} from './features/home/home.component';
-import {linkListerComponent} from './features/home/home.component';
+import {poeComponent} from './shared/poe/poe.component';
 
 import {createForm,theActualListOfLinks} from './features/linkLister/linkList.createForm.html.js';
 
@@ -24,13 +24,20 @@ const frameState = {
 };
 
 // home state - first thing you see when you type in the url
-// also where the site redirects you if you 404
 const homeState = {
   parent: 'frame',
   name: 'home',
   url: '/home',
   component: 'homeComponent'
 }
+
+//  where the site redirects you if you 404
+const poeState = {
+  name: 'poe',
+  url: '/poe',
+  component: 'poeComponent'
+}
+
 // one more state to test the transitions
 // we're only gonna have one other state later anyways
 const linkListState = {
@@ -73,5 +80,6 @@ export const AllStates = [
   linkListState,
   createLinkFormState,
   listLinkState,
-  viewOneLinkState
+  viewOneLinkState,
+  poeState
 ];

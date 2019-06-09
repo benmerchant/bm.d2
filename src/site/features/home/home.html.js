@@ -7,6 +7,12 @@
  * Author: Ben Merchant
 */
 import homeStyles from './home.scss'
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faCamera)
+
+const camera = icon({ prefix: 'fas', iconName: 'camera' })
 
 export const homeTemplate = `
 <div class='row homeRow'>
