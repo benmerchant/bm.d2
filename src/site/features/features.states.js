@@ -44,6 +44,30 @@ const searchState = {
   name: 'frame.search',
   template: '<h1 style="font-size:9rem"; class="text-white">seaarch results go here!</h1>'
 };
+
+
+
+// const tutorialsCardsState = {
+//   name: 'home.tutorialsCards',
+//   component: 'tutorialsCardsComponent'
+// };
+// const projectsCardsState = {
+//   name: 'home.projectsCards',
+//   component: 'projectsCardsComponent'
+// };
+// const articlesCardsState = {
+//   name: 'home.articlesCards',
+//   component: 'articlesCardsComponent'
+// };
+// const blogCardsState = {
+//   name: 'home.blogCards',
+//   component: 'blogCardsComponent'
+// };
+
+
+
 export const FeaturesStates = [
   aboutState,tutorialsState,projectsState,articlesState,blogState,searchState
+
+
 ];

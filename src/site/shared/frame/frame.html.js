@@ -50,13 +50,6 @@ export const frameTemplate = `
   </div>
 </nav>
 
-
-
-
-
-
-
-
 <main class="container">
 
     <ui-view></ui-view>

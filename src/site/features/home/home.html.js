@@ -13,16 +13,18 @@ export const homeTemplate = `
   <div class='col-12 text-center'>
     <h5 class="text-primary">Total of {{$parent.$ctrl.stories.length}} stories</h5>
   </div>
+
   <div class='col-12'>
 
 
+
   <ui-view>
-  <div class="jumbotron jumbotron-fluid rounded">
+    <div class="jumbotron jumbotron-fluid rounded">
     <div class="container">
     <h1 class="display-4">Ben Merchant dot dev</h1>
 
       <p class="lead">
-        Fullstack JavaScript Web Developer | 
+        Fullstack JavaScript Web Developer |
         <i class="fab fa-node-js"></i>
         <i class="fab fa-npm"></i>
         <i class="fab fa-git"></i>
@@ -41,18 +43,33 @@ export const homeTemplate = `
       </p>
       <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
     </div>
-  </div>
-
+    </div>
   </ui-view>
 
 
+
   </div>
 
+  <div class='col-12 p-0'>
+    <div class='btn-group'>
+
+      <div class="btn-group" role="group" aria-label="about example">
+        <button type="button" class="btn btn-secondary active">about</button>
+        <button type="button" class="btn btn-secondary">tutorials</button>
+        <button type="button" class="btn btn-secondary">projects</button>
+        <button type="button" class="btn btn-secondary">articles</button>
+        <button type="button" class="btn btn-secondary">blog</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- #begin col-12 -->
   <div class='col-12 card-column p-0'>
     <div class="row m-0">
 
 
-    <!-- # begin NG-REPEAT              <ui-view></ui-view>-->
+    <!-- # begin NG-REPEAT  -->
       <div ng-repeat="story in $parent.$ctrl.stories | filter:$parent.topSearch" class="col p-0">
 
         <!-- # begin card -->
@@ -75,9 +92,9 @@ export const homeTemplate = `
       <!-- # end NG-REPEAT -->
 
 
-      </div>
     </div>
   </div>
+  <!-- #end col-12 -->
 
 </div>
 `;
