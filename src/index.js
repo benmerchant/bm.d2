@@ -11,6 +11,7 @@
 // for now, leave this here, can move it later to where it makes more sense
 
 import './index.scss';
+import './imgs/black5k.jpg';
 
 import * as angular from 'angular';
 import uiRouter from '@uirouter/angularjs';

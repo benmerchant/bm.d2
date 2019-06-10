@@ -6,7 +6,7 @@
  *
  * Author: Ben Merchant
 */
-import homeStyles from './home.scss'
+import homeStyles from './home.scss';
 
 export const homeTemplate = `
 
@@ -51,17 +51,15 @@ export const homeTemplate = `
   causes the form to disappear, set story type to NULL: <br>
 <span style="font-size: 4rem;">{{$ctrl.storyType ? $ctrl.storyType : 'NOTHING'}}</span>
 </p>
-  <!-- #begin col-12 .btn-group -->
+  <!-- #begin col-12  -->
   <div class="col-12 p-0 d-flex flex-row flex-wrap text-center">
     <small class="w-100"><span class='bg-light rounded p-2'>These will open forms to POST, UPDATE, DELETE</span></small><br><br>
-    <div class='btn-group mx-auto'>
-      <div class="btn-group" role="group" aria-label="about example">
-        <button ng-click="$ctrl.toggleHideForm('about')" type="button" class="btn btn-lg btn-secondary ">about</button>
-        <button ng-click="$ctrl.toggleHideForm('tutorials')" type="button" class="btn btn-lg btn-secondary ">tutorials</button>
-        <button ng-click="$ctrl.toggleHideForm('projects')" type="button" class="btn btn-lg btn-secondary ">projects</button>
-        <button ng-click="$ctrl.toggleHideForm('articles')" type="button" class="btn btn-lg btn-secondary ">articles</button>
-        <button ng-click="$ctrl.toggleHideForm('blog')" type="button" class="btn btn-lg btn-secondary ">blog</button>
-      </div>
+    <div class='mx-auto my-4 d-flex flex-wrap'>
+      <button ng-click="$ctrl.toggleHideForm('about')" type="button" class="btn btn-lg btn-secondary btn-block">about</button>
+      <button ng-click="$ctrl.toggleHideForm('tutorials')" type="button" class="btn btn-lg btn-secondary btn-block">tutorials</button>
+      <button ng-click="$ctrl.toggleHideForm('projects')" type="button" class="btn btn-lg btn-secondary btn-block">projects</button>
+      <button ng-click="$ctrl.toggleHideForm('articles')" type="button" class="btn btn-lg btn-secondary btn-block">articles</button>
+      <button ng-click="$ctrl.toggleHideForm('blog')" type="button" class="btn btn-lg btn-secondary btn-block">blog</button>
     </div>
   </div>
   <!-- #end col-12 -->
