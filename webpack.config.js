@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // doesn't like sending the <title> to the template, it is possibel
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/app/base.module.js',
   output: {
     filename: 'main_bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)/,
-        use: ['file-loader'] 
+        use: ['file-loader']
       }
     ]
   }

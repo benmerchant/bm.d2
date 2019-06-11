@@ -1,5 +1,5 @@
 // main.scss
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 /* Sticky footer styles
 copied directly from
 https://getbootstrap.com/docs/4.1/examples/sticky-footer-navbar/
@@ -15,7 +15,7 @@ body {
   margin-bottom: 60px;
   min-height: 100%;
   height: 100%;
-  background-image: url('./imgs/black5k.jpg');
+  background-image: url('../imgs/black5k.jpg');
 }
 main {
  min-height: 100%;height: 100%;
