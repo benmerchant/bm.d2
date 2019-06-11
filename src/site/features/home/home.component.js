@@ -16,7 +16,7 @@ import {homeTemplate} from './home.html.js';
 class HomeController {
   constructor(){
     this.hideForm = true;
-
+    // this.storyService = StoryService;
   };
   $onInit(){
     this.toggleHideForm = (valueFromView)=>{
@@ -25,6 +25,11 @@ class HomeController {
         this.hideForm ? this.hideForm = false : this.hideForm = true;
         !this.hideForm ? this.storyType = valueFromView : this.storyType = null;
     };
+    this.newStory = {
+      title: '',
+      bodyCopy: '',
+      storyType: ''
+    }
   };
 };
 
