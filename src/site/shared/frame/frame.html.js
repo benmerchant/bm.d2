@@ -15,12 +15,16 @@ logoGrayElement.src = logoGray;
 
 import frameStyles from './frame.scss'
 
-import {navTemplate} from '../nav/nav.html';
+
 import {footerTemplate} from '../footer/footer.html';
 
 export const frameTemplate = `
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div ><a class="navbar-brand" href="#"><img src="${logoGray}" style="height:60px"></a></div>
+  <div>
+    <a class="navbar-brand" ui-sref="home">
+      <img src="${logoGray}" style="height:60px">
+    </a>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -43,19 +47,12 @@ export const frameTemplate = `
     <!-- Filter the Cards -->
       <input ng-model="topSearch" class="form-control mr-sm-2" type="search" placeholder="Search">
 
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" ng-click="$ctrl.goToSearchPage()">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" ng-click="$ctrl.goToSearchPage(topSearch)">
         Search
       </button>
     </form>
   </div>
 </nav>
-
-
-
-
-
-
-
 
 <main class="container">
 

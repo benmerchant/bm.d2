@@ -26,6 +26,7 @@ import {FeaturesModule} from './site/features/features.module';
 // create the app-level module and inject ui-router
 const BMDD_MODULE = angular.module('bmddApp', [
   uiRouter,
+  require('angular-animate'),
   FeaturesModule.name,
   SharedModule.name
 ]);
@@ -34,7 +35,7 @@ BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
   $uiRouter.trace.enable(1);
 
   // basically a 404, later we'll make a state with custom page
-  $uiRouter.urlService.rules.otherwise({state: 'home'});
+  $uiRouter.urlService.rules.otherwise({state: 'poe'});
 
   // register the imported states
   AllStates.forEach((state) => {$uiRouter.stateRegistry.register(state);});

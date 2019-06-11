@@ -9,7 +9,10 @@
 // import shared
 import {frameComponent} from './frame/frame.component';
 
+import {poeComponent} from './pie/poe.component';
 
 export const SharedModule = angular.module('shared',[]);
 
 SharedModule.component('frameComponent',frameComponent);
+
+SharedModule.component('poeComponent',poeComponent);
