@@ -17,7 +17,7 @@ import baseStyles from './base.scss' // updated for ngMotto
 // import {footerTemplate} from '../footer/footer.html'; // updated for ngMotto
 
 export const baseTemplate = `
-<div class="base">
+<div class="base-component">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div>
