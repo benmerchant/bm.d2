@@ -1,3 +1,6 @@
 /sprints
 /node_modules
 /dist
+/distro
+/old_site
+/src

@@ -5,16 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // doesn't like sending the <title> to the template, it is possibel
 module.exports = {
   mode: 'development',
-  entry: './src/app/base.module.js',
-  output: {filename: 'main_bundle.js',path: path.resolve(__dirname, 'dist')},
+  entry: './source/start.js',
+  output: {filename: 'main_bundle.js',path: path.resolve(__dirname, 'distro')},
   plugins: [
     // clean dist folder each build
     new CleanWebpackPlugin(),
     // generate index files
     new HtmlWebpackPlugin(
       {// use my template for generation
-        template: path.join(__dirname,'src/index.html'),
-        favicon: path.resolve(__dirname, 'src/imgs/logo_gray_knockout.ico')
+        template: path.join(__dirname,'source/index.html')
       }
     )
   ],
@@ -29,20 +28,21 @@ module.exports = {
         exclude: [
           path.resolve(__dirname, './node_modules'),
           path.resolve(__dirname, './src/index.html')
-        ],
-        use:[
-          {
-            loader:'ngtemplate-loader',
-            options: {relativeTo: (path.resolve(__dirname, './src/app'))}
-          },
-          {
-            loader: 'html-loader',
-            options: {
-              root: path.resolve(__dirname, './src/imgs'),
-              attrs: ['img:src', 'link:href']
-            }
-          }
         ]
+        // ,
+        // use:[
+        //   {
+        //     loader:'ngtemplate-loader',
+        //     options: {relativeTo: (path.resolve(__dirname, './src/app'))}
+        //   },
+        //   {
+        //     loader: 'html-loader',
+        //     options: {
+        //       root: path.resolve(__dirname, './src/imgs'),
+        //       attrs: ['img:src', 'link:href']
+        //     }
+        //   }
+        // ]
 
       }
     ]
