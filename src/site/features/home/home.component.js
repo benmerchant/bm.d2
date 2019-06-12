@@ -19,11 +19,16 @@ class HomeController {
 
   };
   $onInit(){
+    /**
+    * show/hide the form to submit a new story to DB
+    *
+    * @param {String} valueFromView
+    *
+    *
+    */
     this.toggleHideForm = (valueFromView)=>{
-      // for now just hard code the button name to send it back here
-      // later do it programattically. lets just get it running
-        this.hideForm ? this.hideForm = false : this.hideForm = true;
-        !this.hideForm ? this.storyType = valueFromView : this.storyType = null;
+      this.hideForm ? this.hideForm = false : this.hideForm = true;
+      !this.hideForm ? this.storyType = valueFromView : this.storyType = null;
     };
   };
 };

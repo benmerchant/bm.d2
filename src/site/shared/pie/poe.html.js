@@ -24,8 +24,8 @@ export const poeTemplate = `
   <div class="w-100">
     <form class="form-inline my-2 my-lg-0 twist-shout">
 
-      <input ng-model="" class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0 " type="submit" ng-click="$ctrl.goToSearchPage()">
+      <input ng-model="$ctrl.searchTerm" class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button ng-click="$ctrl.crazyButton()" class="btn btn-outline-primary my-2 my-sm-0 " type="submit" ng-click="$ctrl.goToSearchPage()">
         Search
       </button>
     </form>
@@ -51,6 +51,9 @@ export const poeTemplate = `
   </div>
   <div class="text-white w-100 text-center ">
     <h1 class="display-1">404</h1>
+    <div ng-show="$ctrl.searchClickedOnce" class="mx-auto" style="background: white; width: 50%; color:black;">
+    <a ui-sref="home">Return Home</a>
+    </div>
   </div>
 
 </div>
