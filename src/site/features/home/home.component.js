@@ -10,25 +10,20 @@
 // first need the html template for the homeState object
 import {homeTemplate} from './home.html.js';
 
-
-
-
 class HomeController {
-  constructor(){
+  constructor($state){
     this.hideForm = true;
-
+    this.$state = $state;
   };
-  $onInit(){
+  $onInit($state){
     /**
-    * show/hide the form to submit a new story to DB
-    *
-    * @param {String} valueFromView
-    *
-    *
-    */
+      * show/hide the form to submit a new story to DB
+      * @param {String} valueFromView
+      */
     this.toggleHideForm = (valueFromView)=>{
       this.hideForm ? this.hideForm = false : this.hideForm = true;
       !this.hideForm ? this.storyType = valueFromView : this.storyType = null;
+      console.log(this.$state.get());
     };
   };
 };

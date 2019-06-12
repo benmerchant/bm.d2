@@ -7,28 +7,35 @@
  * Author: Ben Merchant
 */
 // don't need to import the components here... why???
+// @because they're just string names!!!!
+
 // define the states
 
 // these are all nested states of homeState
 const aboutState = {
   name: 'home.about',
-  component: 'aboutComponent'
+  component: 'aboutComponent',
+  url: '/about'
 };
 const tutorialsState = {
   name: 'home.tutorials',
-  component: 'tutorialsComponent'
+  component: 'tutorialsComponent',
+  url: '/tutorials'
 };
 const projectsState = {
   name: 'home.projects',
-  component: 'projectsComponent'
+  component: 'projectsComponent',
+  url: '/projects'
 };
 const articlesState = {
   name: 'home.articles',
-  component: 'articlesComponent'
+  component: 'articlesComponent',
+  url: '/articles'
 };
 const blogState = {
   name: 'home.blog',
-  component: 'blogComponent'
+  component: 'blogComponent',
+  url: '/blog'
 };
 const blogPost = {
   name: 'blog.post',
@@ -44,25 +51,6 @@ const searchState = {
   name: 'frame.search',
   template: '<h1 style="font-size:9rem"; class="text-white">seaarch results go here!</h1>'
 };
-
-
-
-// const tutorialsCardsState = {
-//   name: 'home.tutorialsCards',
-//   component: 'tutorialsCardsComponent'
-// };
-// const projectsCardsState = {
-//   name: 'home.projectsCards',
-//   component: 'projectsCardsComponent'
-// };
-// const articlesCardsState = {
-//   name: 'home.articlesCards',
-//   component: 'articlesCardsComponent'
-// };
-// const blogCardsState = {
-//   name: 'home.blogCards',
-//   component: 'blogCardsComponent'
-// };
 
 
 

@@ -24,12 +24,21 @@ import {FeaturesStates} from './site/features/features.states';
 import {SharedModule} from './site/shared/shared.module';
 import {FeaturesModule} from './site/features/features.module';
 
+//
+//
+// working on a refactor. starting with consolidating stories
+import {storiesModule} from './site/stories/stories.module';
+//
+//
+//
+
 // create the app-level module and inject ui-router
 const BMDD_MODULE = angular.module('bmddApp', [
   uiRouter,
   require('angular-animate'),
   FeaturesModule.name,
-  SharedModule.name
+  SharedModule.name,
+  storiesModule
 ]);
 BMDD_MODULE.config(['$uiRouterProvider',($uiRouter)=>{
   // enable tracing the State Transitions in the console

@@ -22,24 +22,13 @@ const frameState = {
   component: 'frameComponent'
 };
 
-// home state - first thing you see when you type in the url
-
-const homeState = {
-  parent: 'frame',
-  name: 'home',
-  url: '/home',
-  component: 'homeComponent'
-}
-
-// also where the site redirects you if you 404
+// redirect 404
 const poeState = {
   name: 'poe',
   url: '/poe',
   component: 'poeComponent'
 }
 
-// one more state to test the transitions
-// we're only gonna have one other state later anyways
 const linkListState = {
   parent: 'frame',
   name: 'linkList',
@@ -76,7 +65,6 @@ const viewOneLinkState = {
 // export all together
 export const AllStates = [
   frameState,
-  homeState,
   linkListState,
   createLinkFormState,
   listLinkState,
