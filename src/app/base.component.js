@@ -1,5 +1,9 @@
-import {baseTemplate} from './base.html.js';
+// import {baseTemplate} from './base.html.js';
 
 export const baseComponent = {
-  baseTemplate
+  template: `
+  <div class="base-component">
+    <div ui-view></div>
+  </div>
+  `
 };
