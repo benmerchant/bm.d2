@@ -7,7 +7,6 @@
  * Author: Ben Merchant
 */
 import homeStyles from './home.scss';
-
 export const homeTemplate = `
 
 <div class='row homeRow'>
@@ -59,19 +58,21 @@ export const homeTemplate = `
 
   <!-- #begin col-12  -->
   <div class="col-12 p-0 d-flex flex-row flex-wrap text-center">
-    <small class="w-100"><span class='bg-light rounded p-2'>These will open forms to POST, UPDATE, DELETE</span></small><br><br>
+    <small class="w-100">
+      <span class='bg-light rounded p-2'>
+        These will open forms to POST, UPDATE, DELETE
+      </span>
+    </small>
+    <br><br>
     <div class='mx-auto my-4 d-flex flex-wrap'>
-      <button ui-sref="home.new" ng-click="$ctrl.toggleHideForm('about')" type="button" class="btn btn-lg btn-secondary btn-block">about</button>
-      <button ng-click="$ctrl.toggleHideForm('tutorials')" type="button" class="btn btn-lg btn-secondary btn-block">tutorials</button>
-      <button ng-click="$ctrl.toggleHideForm('projects')" type="button" class="btn btn-lg btn-secondary btn-block">projects</button>
-      <button ng-click="$ctrl.toggleHideForm('articles')" type="button" class="btn btn-lg btn-secondary btn-block">articles</button>
-      <button ng-click="$ctrl.toggleHideForm('blog')" type="button" class="btn btn-lg btn-secondary btn-block">blog</button>
+      <button ui-sref="home.newStory" ng-click="$ctrl.toggleHideForm('about')" type="button" class="btn btn-lg btn-secondary btn-block">about</button>
+      <button ui-sref="home.newStory" ng-click="$ctrl.toggleHideForm('tutorials')" type="button" class="btn btn-lg btn-secondary btn-block">tutorials</button>
+      <button ui-sref="home.newStory" ng-click="$ctrl.toggleHideForm('projects')" type="button" class="btn btn-lg btn-secondary btn-block">projects</button>
+      <button ui-sref="home.newStory" ng-click="$ctrl.toggleHideForm('articles')" type="button" class="btn btn-lg btn-secondary btn-block">articles</button>
+      <button ui-sref="home.newStory" ng-click="$ctrl.toggleHideForm('blog')" type="button" class="btn btn-lg btn-secondary btn-block">blog</button>
     </div>
   </div>
   <!-- #end col-12 -->
-
-  <div ui-view="newForm"></div>
-
 
   <!-- #begin col-12 <form> -->
   <div ng-hide="$ctrl.hideForm" class="col-12 py-5 d-flex flex-row flex-wrap text-center bg-success storyForm">
@@ -91,13 +92,21 @@ export const homeTemplate = `
         <div class="card mx-auto my-3" style="width: 18rem;">
           <img src="https://petharbor.com/get_image.asp?RES=Detail&ID=A607751&LOCATION=AZHS1" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{story.title}}</h5>
+            <h5 class="card-title">
+              {{story.title}}
+            </h5>
             <div class="d-flex flex-row justify-content-between">
               {{story.date.toDateString()}}
-              <em><a ui-sref="home.{{story.category}}">{{story.category}}</a></em>
+              <em>
+                  <a ui-sref="home.{{story.category}}">
+                  {{story.category}}
+                </a>
+              </em>
             </div>
             <hr>
-            <p class="card-text">{{story.snippet}}</p>
+            <p class="card-text">
+              {{story.snippet}}
+            </p>
             <button class="btn btn-outline-primary">Read More</button>
           </div>
         </div>
@@ -105,7 +114,6 @@ export const homeTemplate = `
 
       </div>
       <!-- # end NG-REPEAT -->
-
 
     </div>
   </div>

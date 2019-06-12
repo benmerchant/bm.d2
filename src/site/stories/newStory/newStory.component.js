@@ -13,15 +13,24 @@ export const newStoryComponent = {
         bodyCopy: '',
         storyType: ''
       };
-    }
-    createNewStory(event){
-      return this.contactService
-        .createNewStory(event.story)
-        .then((story) => {
-          $this.$state.go('home',{
-            theNewStoryObj: story
-          });
-        });
     };
+    saveStory(){
+      console.log('saveStory');
+      this.onSave({ $event: { story: this.story } });
+    };
+    updateStoryModel(){
+      console.log('updateStoryModel');
+      this.onUpdate({ $event: { story: this.story } });
+    };
+    createNewStory(event){
+      return this.storyService
+        .createNewStory(event.story)
+        .then((story) => { this.$state.go('home')} );
+    }
+  },
+  bindings: {
+    story: '<',
+    onUpdate: '&',
+    onSave: '&'
   }
 }

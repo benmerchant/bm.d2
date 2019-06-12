@@ -40,6 +40,7 @@ export const frameTemplate = `
         <a class="nav-item nav-link" ui-sref="home.projects">Projects</a>
         <a class="nav-item nav-link" ui-sref="home.articles">Articles</a>
         <a class="nav-item nav-link" ui-sref="home.blog">Blog</a>
+        <a class="nav-item nav-link" ui-sref="home.newStory">NEW STORY TEST</a>
         <button class="btn nav-item nav-link btn-primary btn-sm" ui-sref="linkList">Link List</button>
 
     </div>

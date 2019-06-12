@@ -12,8 +12,8 @@ export class StoryService {
     this.$http = $http;
     this.url = 'http://localhost:3001/api/stories';
   }
-  /**
-    * send a story object to be saved in MongoDB
+  /** send a story object to be saved in MongoDB
+    *
     *
     * @param {Object} story {
                               title: String,

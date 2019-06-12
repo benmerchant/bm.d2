@@ -21,7 +21,7 @@ class frameController {
   constructor($state){
     this.name = 'Ben Merchant';
     this.$state = $state;
-    console.log($state.params);
+    // console.log($state.params);
   };
   $onInit(){
     // make some programatticly created dates

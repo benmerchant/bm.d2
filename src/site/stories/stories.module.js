@@ -7,7 +7,7 @@
 * @copyright 2019
 */
 
-import {newStoryModule} from './newStory.module';
+import {newStoryModule} from './newStory/newStory.module';
 import {StoryService} from './stories.service';
 
 export const storiesModule = angular.module('stories', [

@@ -13,12 +13,11 @@ import {newStoryComponent} from './newStory.component';
 export const newStoryModule = angular.module('newStory',[uiRouter])
 .component('newStoryComponent', newStoryComponent)
 .config(['$uiRouterProvider',($uiRouter) => {
-  const newStoryState = {
-    parent: 'home',
-    name: 'newStory',
-    url: '/home/new',
-    component: 'newStoryComponent'
-  };
-  $uiRouter.stateRegistry.register(newStoryState);
+  $uiRouter.stateRegistry
+    .register({
+      name: 'home.newStory',
+      url: '/story/new',
+      component: 'newStoryComponent'
+    });
 }])
 .name;
